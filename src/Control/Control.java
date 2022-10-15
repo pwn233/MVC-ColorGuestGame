@@ -37,4 +37,9 @@ public class Control {
     public int getRoundCount() {
         return m.getRoundCount();
     }
+
+    public void resetParent() {
+        m.generateParent();
+        m.resetRound();
+    }
 }

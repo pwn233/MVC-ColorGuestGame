@@ -59,7 +59,7 @@ public class Model {
         if(dummy.equals("BBBBBB")) {
             status = "You win! : "+dummy+" "+roundCheck();
             generateParent();
-            roundCount = 0;
+            resetRound();
         } 
         else {
             status = "Not yet, but this might help : "+dummy+" and "+roundCheck();
@@ -70,9 +70,12 @@ public class Model {
     public void round() {
         roundCount++;
     }
+    public void resetRound() {
+        roundCount = 0;
+    }
     public String roundCheck() {
         if(roundCount == 9) {
-          return "Game Over!, out of rounds to play.";
+          return "Game Over!, out of rounds to play.\nColors and rounds has been reseted.";
         } else
         return "Played "+roundCount+"/8.";   
     }

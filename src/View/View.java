@@ -129,6 +129,7 @@ public class View extends javax.swing.JFrame {
             c.checkGuess();  
             if(c.getRoundCount() == 9) {
                 JOptionPane.showMessageDialog(this,c.roundCheck());
+                c.resetParent();
              
             } else {
                 JOptionPane.showMessageDialog(this,c.returnStatus());
